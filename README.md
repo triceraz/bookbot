@@ -1,6 +1,4 @@
 # bookbot
 
-Takes a text and returns number of characters and frequency of characters.
-
-First project.
+Simple Python script that takes a book and outputs the words and character count to the command line
 
