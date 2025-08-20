@@ -25,6 +25,16 @@ def make_list(dictionary):
         list_for_sorting.append({"name": char, "num": dictionary[char]})
     return list_for_sorting
 
+def count_words_length(book):
+    list_of_words = book.split(" ")
+    length = {}
+    for word in list_of_words:
+        if len(word) not in length:
+            length[len(word)] = 1
+        else:
+            length[len(word)] += 1
+    return dict(sorted(length.items()))
+
 def make_pretty(character_count, dictionary):
     list_for_sorting = []
     for char in dictionary:
@@ -36,6 +46,5 @@ def make_pretty(character_count, dictionary):
     print(f"Found {character_count} total words")
     print("--------- Character Count -------")
     for dictionary in list_for_sorting:
-        print(f"{dictionary["name"]}: {dictionary["num"]}")
+        print(f"{dictionary['name']}: {dictionary['num']}")
     print("============= END ===============")
-
