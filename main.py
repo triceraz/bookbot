@@ -7,9 +7,11 @@ if len(sys.argv) != 2:
     print("Usage: python3 main.py <path_to_book>")
     sys.exit(1)
 
+
 def get_book_text(filepath):
     with open(filepath) as bookfile:
         return bookfile.read()
+
 
 def main():
     plot = decision()
@@ -22,5 +24,5 @@ def main():
         plotting(text)
 
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     main()
